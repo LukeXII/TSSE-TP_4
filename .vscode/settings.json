@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "mock_gpio.h": "c",
+        "stdint.h": "c",
+        "stm32f4xx_hal_adc.h": "c",
+        "stm32f4xx_hal_gpio.h": "c"
+    }
+}
