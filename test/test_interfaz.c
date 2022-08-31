@@ -13,6 +13,8 @@
  - 3 señales de control conectadas a GPIOs (entradas)
  - 2 señales analogicas proporcionales a las potencias opticas de entrada y salida (0V a 3.3V)
 
+ Los detalles sobre el funcionamiento de la interfaz se encuentran en el documento "Pruebas de Sistemas y de Aceptacion"
+
 */
 
 void setUp(void)

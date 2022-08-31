@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Mock de la HAL del ADC
+
 typedef enum 
 {
   HAL_OK       = 0x00U,

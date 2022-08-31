@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+// Mock de la HAL de GPIO
+
 typedef enum
 {
   GPIO_PIN_RESET = 0,

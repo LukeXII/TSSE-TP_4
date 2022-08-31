@@ -2,12 +2,18 @@
 #include "stm32f4xx_hal_adc.h"
 #include "stm32f4xx_hal_gpio.h"
 
+// ADC handlers
+
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
+
+// Internal variables
 
 static float maxOutputPower = 0;
 static float minInputPower = 0;
 static float maxInputPower = 0;
+
+// Used GPIO Ports
 
 GPIO_TypeDef * GPIOF;
 
@@ -68,7 +74,7 @@ float getInputPower(void)
 	
 	accValue /= SAMPLES_NUMBER;
 
-	accValue = accValue*(INPUT_POW_MAX_VALUE - INPUT_POW_MIN_VALUE)/4095 - 50;
+	accValue = accValue*(INPUT_POW_MAX_VALUE - INPUT_POW_MIN_VALUE)/ADC_RESOLUTION_LEVELS + INPUT_POW_MIN_VALUE;
 
 	return accValue;
 }
@@ -87,7 +93,7 @@ float getOutputPower(void)
 	
 	accValue /= SAMPLES_NUMBER;
 
-	accValue = accValue*(OUTPUT_POW_MAX_VALUE)/4095;
+	accValue = accValue*(OUTPUT_POW_MAX_VALUE)/ADC_RESOLUTION_LEVELS;
 
 	return accValue;
 }

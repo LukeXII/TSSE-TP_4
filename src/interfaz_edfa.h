@@ -3,10 +3,13 @@
 
 #include <stdint.h>
 
+// Modulo para el manejo de la interfaz del tester con el EDFA
+
 #define OUTPUT_POW_MAX_VALUE	40.0
 #define INPUT_POW_MAX_VALUE	    10.0
 #define INPUT_POW_MIN_VALUE	    -50.0
 #define SAMPLES_NUMBER		    20
+#define ADC_RESOLUTION_LEVELS	4095
 
 void setMaxOutputPower(float maxPower);
 int8_t setInputPowerRange(float minPower, float maxPower);
